@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ public class StringStackTest
     @Before
     public void setup() throws Exception
     {
-        s = new StringStack(5); // keep size of 5 !!
+        s = new StringStack(5); // keep size of 5 !
     }
     
     /**
@@ -22,6 +23,7 @@ public class StringStackTest
     @Test
     public void testIsEmpty() throws Exception
     {
+        assertTrue(s.isEmpty());
     }
     
     /**
