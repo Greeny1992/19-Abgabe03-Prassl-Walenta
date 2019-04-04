@@ -52,6 +52,10 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+        s.push("PushPop");
+        assertFalse(s.isEmpty());
+        s.pop();
+        assertTrue(s.isEmpty());
     }
     
     /**
