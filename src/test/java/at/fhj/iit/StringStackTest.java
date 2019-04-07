@@ -68,5 +68,20 @@ public class StringStackTest
     public void testEmptyPop() throws Exception {
         s.pop();
     }
-    
+
+    /**
+     * test push function
+     *
+     * it pushes 6 elements. With the 6. Element it should throw an exception.
+     * @throws Exception
+     */
+    @Test(expected =  IllegalStateException.class)
+    public void testMaxPush() throws Exception {
+        s.push("1");
+        s.push("2");
+        s.push("3");
+        s.push("4");
+        s.push("5");
+        s.push("6");
+    }
 }
