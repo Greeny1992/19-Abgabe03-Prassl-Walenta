@@ -9,8 +9,7 @@ public class StringStackTest
     public Stack s;
     
     @Before
-    public void setup() throws Exception
-    {
+    public void setup() throws Exception {
         s = new StringStack(5); // keep size of 5 !
     }
     
@@ -21,8 +20,7 @@ public class StringStackTest
      * - assertTrue to check it's empty
      */
     @Test
-    public void testIsEmpty() throws Exception
-    {
+    public void testIsEmpty() throws Exception {
         assertTrue(s.isEmpty());
     }
     
@@ -33,8 +31,7 @@ public class StringStackTest
      * - assertFalse to check it's not empty
      */
     @Test
-    public void testIsNotEmpty() throws Exception
-    {
+    public void testIsNotEmpty() throws Exception {
         s.push("test");
         assertFalse(s.isEmpty());
     }
@@ -50,8 +47,7 @@ public class StringStackTest
      * @throws Exception 
      */
     @Test
-    public void testPushPop() throws Exception
-    {
+    public void testPushPop() throws Exception {
         s.push("PushPop");
         assertFalse(s.isEmpty());
         s.pop();
@@ -61,5 +57,16 @@ public class StringStackTest
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
+
+    /**
+     * test pop function
+     *
+     * it pops a non existing element of a stack and should throw an exception
+     * @throws Exception
+     */
+    @Test(expected = IllegalStateException.class)
+    public void testEmptyPop() throws Exception {
+        s.pop();
+    }
     
 }
