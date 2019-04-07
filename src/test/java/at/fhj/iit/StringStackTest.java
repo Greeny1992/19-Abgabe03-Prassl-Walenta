@@ -84,4 +84,14 @@ public class StringStackTest
         s.push("5");
         s.push("6");
     }
+    /**
+     * test Constructor function
+     *
+     * if the capacity is <= 0 it should throw an exception
+     * @throws Exception
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testMinCapacity() throws Exception {
+        s = new StringStack(0);
+    }
 }
